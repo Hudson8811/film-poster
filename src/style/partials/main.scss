@@ -1,0 +1,420 @@
+$font1: "Gotham Pro", sans-serif;
+$font2: "Cochin", sans-serif;
+
+a{
+	text-decoration: none;
+}
+
+body{
+	color: #f5f5d2;
+	font-family: $font1;
+	margin: 0;
+	background: #ba0022 url("../images/bg.png") center top repeat;
+	line-height: 1;
+}
+
+#wrapper{
+	height: 100vh;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	.main-content{
+		display: flex;
+		width: 100%;
+		height: 100%;
+
+
+		.top-side{
+			width: 100%;
+			height: 7.3vw;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background: url("../images/bg_botom.png") center top repeat;
+			box-sizing: border-box;
+		}
+		.bottom-side{
+			width: 100%;
+			height: 3.4vw;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background: url("../images/bg_botom.png") center top repeat;
+			box-sizing: border-box;
+		}
+
+
+		.left-side{
+			position: relative;
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			.top-side{
+				.menu-show{
+					position: absolute;
+					width: 4.53vw;
+					left: 2.23vw;
+					top: -1.85vw;
+					display: block;
+					cursor: pointer;
+					transition: 0.2s top linear;
+					img{
+						display: block;
+						width: 100%;
+					}
+					&:hover{
+						top: -1.2vw;
+					}
+				}
+				.title{
+					display: flex;
+					align-items: center;
+					box-sizing: border-box;
+					padding: 0 2.76vw 0 7.916vw;
+					height: 100%;
+					width: 100%;
+					img{
+						display: block;
+						width: 100%;
+					}
+				}
+			}
+			.bottom-side{
+				.flex-block{
+					display: flex;
+					width: 92%;
+					align-items: center;
+					margin: 0 auto;
+					justify-content: space-between;
+					height: 100%;
+					.soc-block{
+						display: flex;
+						align-items: center;
+						.label{
+							color: #f5f5d2;
+							font-size: 0.9vw;
+							font-weight: 500;
+							text-transform: uppercase;
+						}
+						.icons{
+							margin-left: 1.65vw;
+							display: flex;
+							align-items: center;
+							a{
+								display: block;
+								+a{
+									margin-left: 1.1vw;
+								}
+								img{
+									display: block;
+									max-height: 2vw;
+									max-width: 2vw;
+								}
+							}
+						}
+					}
+					.btn-block{
+						border-radius: 0.4vw;
+						padding: 0.5vw;
+						background: #f5f5d2;
+						text-align: center;
+						.btn{
+							display: block;
+							border: .11vw dotted #ba0022;
+							border-radius: .3vw;
+							padding: .3vw .7vw;
+							color: #ba0022;
+							font-size: 0.65vw;
+							font-weight: 700;
+							text-transform: uppercase;
+							&:hover{
+								background: #ba0022;
+								color: #f5f5d2;
+							}
+						}
+					}
+				}
+			}
+
+			.top-block{
+				padding: 8.33vw 2.76vw 0 2.23vw;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				img{
+					display: block;
+					width: 12.34375vw;
+				}
+				.date{
+					color: #f5f5d2;
+					font-size: 1.4583vw;
+					font-weight: 700;
+					text-transform: uppercase;
+				}
+			}
+			.middle-block{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				padding-bottom: 3.4vw;
+				box-sizing: border-box;
+				flex-grow: 1;
+				.content-1{
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.btn-block{
+						border-radius: 0.43vw;
+						padding: 0.6vw;
+						background: #f5f5d2;
+						text-align: center;
+						margin-top: 4vh;
+						.btn{
+							display: block;
+							border: .11vw dotted #ba0022;
+							border-radius: .3vw;
+							padding: .7vw 1.8vw;
+							color: #ba0022;
+							font-size: 1.05vw;
+							font-weight: 700;
+							text-transform: uppercase;
+							cursor: pointer;
+							&:hover{
+								background: #ba0022;
+								color: #f5f5d2;
+							}
+						}
+					}
+					.text-block{
+						width: 26.15625vw;
+						height: 26.3vw;
+						background: url("../images/circle_bg.png") center center no-repeat;
+						background-size: contain;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						text-align: center;
+						font-family: $font2;
+						font-size: 2vw;
+						font-style: italic;
+						text-transform: uppercase;
+						span{
+							transform: scaleX(0.9);
+						}
+					}
+				}
+				.content-2{
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+					display: none;
+					&.active{
+						display: flex;
+					}
+					.title{
+						color: #f5f5d2;
+						text-transform: uppercase;
+						font-family: $font2;
+						font-size: 2.65625vw;
+						font-style: italic;
+						transform: scaleX(0.9);
+					}
+					.line{
+						width: 15.05vw;
+						margin-top: 2.8vw;
+						margin-bottom: 1.8vw;
+						img{
+							display: block;
+							width: 100%;
+						}
+					}
+					.menu-block{
+						.item{
+							a{
+								display: inline-block;
+								width: max-content;
+								padding: 0.55vw 0.9vw;
+								border: 2px solid transparent;
+								position: relative;
+								border-radius: 1vw;
+								color: #f5f5d2;
+								text-transform: uppercase;
+								font-size: 1.51vw;
+								&:hover{
+									border: 2px solid #f5f5d2;
+									&::before, &::after{
+										content: "";
+										display: block;
+										position: absolute;
+										width: 10px;
+										height: 10px;
+										top: calc(50% - 5px);
+										border-radius: 100%;
+										background: #f5f5d2;
+									}
+									&::before{
+										left: -6px;
+									}
+									&::after{
+										right: -6px;
+									}
+								}
+							}
+							+.item{
+								margin-top: 1.3vw;
+							}
+						}
+					}
+				}
+			}
+		}
+		.right-side{
+			position: relative;
+			width: 50%;
+			display: flex;
+			align-items: center;
+			.poster-block{
+				width: 96.66%;
+				height: 93%;
+				position: relative;
+				z-index: 2;
+				box-shadow: 0 0 74px 6px #000000;
+				border-radius: 4px;
+				overflow: hidden;
+				> img{
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				.link_5{
+					display: block;
+					width: 26.89%;
+					position: absolute;
+					left: 4.74%;
+					bottom: 3.18%;
+					transition: transform 0.1s linear;
+					img{
+						display: block;
+						width: 100%;
+					}
+					&:hover{
+						transform: scale(1.02);
+					}
+				}
+			}
+			.bottom-side{
+				.flex-block{
+					position: relative;
+					z-index: 3;
+					display: flex;
+					align-items: flex-end;
+					justify-content: space-between;
+					width: 96.66%;
+					height: 83%;
+					.copy-text-block{
+						display: flex;
+						justify-content: space-between;
+						width: 95%;
+						.copy-text{
+							color: #f5f5d2;
+							font-size: 0.59vw;
+						}
+					}
+					.reit{
+						color: #f5f5d2;
+						font-size: 1.1vw;
+						position: relative;
+						top: 4%;
+					}
+				}
+			}
+		}
+	}
+	.over-menu{
+		width: 100%;
+		height: 100%;
+		background: rgba(245, 244, 210, 0.95);
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 100;
+		display: none;
+		.close-menu{
+			position: absolute;
+			display: block;
+			width: 6.0416vw;
+			right: 1.8229vw;
+			top: 1.8229vw;
+			cursor: pointer;
+			z-index: 101;
+			img{
+				display: block;
+				width: 100%;
+			}
+			&:hover{
+				&::before{
+					content: "";
+					width: 100%;
+					height: 100%;
+					display: block;
+					background: url("../images/close2.png") left top no-repeat;
+					background-size: contain;
+					position: absolute;
+					left: 0;
+					top: 0;
+					z-index: 1;
+				}
+				img{
+					opacity: 0;
+				}
+			}
+		}
+		.menu-block{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			.line-top{
+				display: block;
+				width: 31vw;
+				img{
+					display: block;
+					width: 100%;
+				}
+			}
+			.line-bot{
+				display: block;
+				width: 14.5vw;
+				img{
+					display: block;
+					width: 100%;
+				}
+			}
+			.menu-items{
+				margin: 3.90625vw 0 3.3854vw;
+				color: #000000;
+				font-family: $font2;
+				font-size: 2.34375vw;
+				text-transform: uppercase;
+				line-height: 3.0729vw;
+				.sep{
+					font-size: 3.0729vw;
+				}
+				.item{
+					a{
+						color: #000000;
+						&:hover{
+							color: #ba0022;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
